@@ -82,12 +82,11 @@ function removeFromCart(item) {
   for (let i = 0; i < cart.length; i++) {
       let obj = cart[i];
       if (obj.hasOwnProperty(item)) {
-          [...cart.slice(0, i), ...cart.slice(i + 1)]
-      } 
-      let itemName = keys[0];
-      let itemPrice = item[itemName];
-      total += itemPrice;
+          return [...cart.slice(0, i), ...cart.slice(i + 1)];
+      }
   }
+  console.log("That item is not in your cart.");
+  return cart;
 }
 
 function placeOrder(cardNumber) {
