@@ -41,16 +41,15 @@ function viewCart() {
                 let keys = Object.keys(item);
                 let itemName = keys[0];
                 let itemPrice = item[itemName];
-                if (i === cart.lengtth - 1) {
+                if (i === cart.length - 1) {
                     log += `and ${itemName} at $${itemPrice}.`;
                 } else {
                     log += `${itemName} at $${itemPrice}, `;
                 }
-                
             }
+        
     }
 
-    }
 }
 
 function total() {
