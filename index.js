@@ -42,11 +42,7 @@ function viewCart() {
                     log += `and ${itemName} at $${itemPrice}.`;
                 }
             }
-            var item = cart[0];
-            var keys = Object.keys(item);
-            var itemName = keys[0];
-            var itemPrice = item[itemName];
-            console.log(`In your cart, you have ${itemName} at $${itemPrice}.`);
+            console.log(log);
             break;
         default:
             var log = "In your cart, you have ";
