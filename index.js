@@ -29,7 +29,25 @@ function viewCart() {
             var itemPrice = item[itemName];
             console.log(`In your cart, you have ${itemName} at $${itemPrice}.`);
         case 2:
+            var item = cart[0];
+            var keys = Object.keys(item);
+            var itemName = keys[0];
+            var itemPrice = item[itemName];
+            console.log(`In your cart, you have ${itemName} at $${itemPrice}.`);
         default:
+            var log = "In your cart, you have ";
+            for (let i = 0; i < cart.length; i++) {
+                let item = cart[i];
+                let keys = Object.keys(item);
+                let itemName = keys[0];
+                let itemPrice = item[itemName];
+                if (i === cart.lengtth - 1) {
+                    log += `and ${itemName} at $${itemPrice}.`;
+                } else {
+                    log += `${itemName} at $${itemPrice}, `;
+                }
+                
+            }
     }
 
     }
