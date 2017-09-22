@@ -18,7 +18,7 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+    // write your code here
     switch (cart.length) {
         case 0:
             console.log("Your shopping cart is empty.");
@@ -65,35 +65,35 @@ function viewCart() {
 }
 
 function total() {
-  // write your code here
-  var total = 0;
-  for (let i = 0; i < cart.length; i++) {
-      let item = cart[i];
-      let keys = Object.keys(item);
-      let itemName = keys[0];
-      let itemPrice = item[itemName];
-      total += itemPrice;
-  }
-  return total;
+    // write your code here
+    var total = 0;
+    for (let i = 0; i < cart.length; i++) {
+        let item = cart[i];
+        let keys = Object.keys(item);
+        let itemName = keys[0];
+        let itemPrice = item[itemName];
+        total += itemPrice;
+    }
+    return total;
 }
 
 function removeFromCart(item) {
-  // write your code here
-  for (let i = 0; i < cart.length; i++) {
-      let obj = cart[i];
-      if (obj.hasOwnProperty(item)) {
-          cart.splice(i, 1);
-          return cart;
-      }
-  }
-  console.log("That item is not in your cart.");
-  return cart;
+    // write your code here
+    for (let i = 0; i < cart.length; i++) {
+        let obj = cart[i];
+        if (obj.hasOwnProperty(item)) {
+            cart.splice(i, 1);
+            return cart;
+        }
+    }
+    console.log("That item is not in your cart.");
+    return cart;
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
-  if (cardNumber === null) {
-      console.log("Sorry, we don't have a credit card on file for you.");
-      return;
-  }
+    // write your code here
+    if (cardNumber === null) {
+        console.log("Sorry, we don't have a credit card on file for you.");
+        return;
+    }
 }
