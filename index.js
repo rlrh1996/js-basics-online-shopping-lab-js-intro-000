@@ -66,10 +66,28 @@ function viewCart() {
 
 function total() {
   // write your code here
+  var total = 0;
+  for (let i = 0; i < cart.length; i++) {
+      let item = cart[i];
+      let keys = Object.keys(item);
+      let itemName = keys[0];
+      let itemPrice = item[itemName];
+      total += itemPrice;
+  }
+  return total;
 }
 
 function removeFromCart(item) {
   // write your code here
+  for (let i = 0; i < cart.length; i++) {
+      let obj = cart[i];
+      if (obj.hasOwnProperty(item)) {
+          [...cart.slice(0, i), ...cart.slice(i + 1)]
+      } 
+      let itemName = keys[0];
+      let itemPrice = item[itemName];
+      total += itemPrice;
+  }
 }
 
 function placeOrder(cardNumber) {
