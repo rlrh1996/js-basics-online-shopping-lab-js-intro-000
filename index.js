@@ -61,7 +61,7 @@ function viewCart() {
             console.log(log);
             break;
     }
-
+    return;
 }
 
 function total() {
