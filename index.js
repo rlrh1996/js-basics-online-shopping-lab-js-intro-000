@@ -26,7 +26,7 @@ function viewCart() {
             var item = cart[0];
             var keys = Object.keys(item);
             var itemName = keys[0];
-            var itemPrice = item.keys[0];
+            var itemPrice = item[itemName];
             console.log(`In your cart, you have ${itemName} at $${itemPrice}.`);
         case 2:
         default:
