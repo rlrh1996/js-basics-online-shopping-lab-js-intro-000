@@ -23,17 +23,30 @@ function viewCart() {
         case 0:
             console.log("Your shopping cart is empty.");
         case 1:
-            var item = cart[0];
-            var keys = Object.keys(item);
-            var itemName = keys[0];
-            var itemPrice = item[itemName];
+            let item = cart[0];
+            let keys = Object.keys(item);
+            let itemName = keys[0];
+            let itemPrice = item[itemName];
             console.log(`In your cart, you have ${itemName} at $${itemPrice}.`);
+            break;
         case 2:
+            for (let i = 0; i < 2; i++) {
+                let item = cart[i];
+                let keys = Object.keys(item);
+                let itemName = keys[0];
+                let itemPrice = item[itemName];
+                if (i === cart.length - 1) {
+                    log += `and ${itemName} at $${itemPrice}.`;
+                } else {
+                    log += `${itemName} at $${itemPrice}, `;
+                }
+            }
             var item = cart[0];
             var keys = Object.keys(item);
             var itemName = keys[0];
             var itemPrice = item[itemName];
             console.log(`In your cart, you have ${itemName} at $${itemPrice}.`);
+            break;
         default:
             var log = "In your cart, you have ";
             for (let i = 0; i < cart.length; i++) {
@@ -48,6 +61,7 @@ function viewCart() {
                 }
             }
             console.log(log);
+            break;
     }
 
 }
