@@ -47,7 +47,7 @@ function viewCart() {
                     log += `${itemName} at $${itemPrice}, `;
                 }
             }
-        
+            console.log(log);
     }
 
 }
