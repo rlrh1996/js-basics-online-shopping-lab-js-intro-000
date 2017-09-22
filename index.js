@@ -30,15 +30,16 @@ function viewCart() {
             console.log(`In your cart, you have ${itemName} at $${itemPrice}.`);
             break;
         case 2:
+            var log = "In your cart, you have ";
             for (let i = 0; i < 2; i++) {
                 let item = cart[i];
                 let keys = Object.keys(item);
                 let itemName = keys[0];
                 let itemPrice = item[itemName];
-                if (i === cart.length - 1) {
-                    log += `and ${itemName} at $${itemPrice}.`;
+                if (i === 0) {
+                    log += `${itemName} at $${itemPrice} `;
                 } else {
-                    log += `${itemName} at $${itemPrice}, `;
+                    log += `and ${itemName} at $${itemPrice}.`;
                 }
             }
             var item = cart[0];
