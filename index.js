@@ -22,6 +22,7 @@ function viewCart() {
     switch (cart.length) {
         case 0:
             console.log("Your shopping cart is empty.");
+            break;
         case 1:
             let item = cart[0];
             let keys = Object.keys(item);
